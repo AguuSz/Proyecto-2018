@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.agus.dashboard_final">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Smartwatch Cet N°9"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Home"
+            android:label="Smartwatch">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>/
+        <activity android:name=".caso_brillo"
+            android:label="Brillo"
+            android:parentActivityName=".Home"/>
+        <activity android:name=".caso_bluetooth"
+            android:label="Ayuda"
+            android:parentActivityName=".Home"/>
+        <activity android:name=".caso_bateria"
+            android:label="Bateria"
+            android:parentActivityName=".Home"/>
+        <activity android:name=".caso_fecha_hora"
+            android:label="Idea1"
+            android:parentActivityName=".Home"/>
+        <activity android:name=".caso_tema"
+            android:label="Idea 2"
+            android:parentActivityName=".Home">
+        </activity>
+    </application>
+
+</manifest>
