@@ -4,3 +4,5 @@ En este repositorio se iran incluyendo los avances realizados en Arduino, ademas
 
 ![Logo del colegio](http://3.bp.blogspot.com/_1QVRRCMwDYw/TUyHbF4sxtI/AAAAAAAAAAw/FjpWd0fhaJE/s1600/esc2.JPG)
 
+<img align="center" src="http://3.bp.blogspot.com/_1QVRRCMwDYw/TUyHbF4sxtI/AAAAAAAAAAw/FjpWd0fhaJE/s1600/esc2.JPG" alt="Logo del colegio">
+
