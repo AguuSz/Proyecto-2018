@@ -1,0 +1,26 @@
+Codigo arduino para LCD que imprima texto estatico.
+-----------------------------------------------------------------------------------------
+#include <LiquidCrystal.h> //Incluye libreria LiquidCrystal
+#define COLS 16 // Columnas del LCD
+#define ROWS 2 // Filas del LCD
+#define Pito "Hola"
+LiquidCrystal lcd(12,11,5,4,3,2);
+
+void setup()
+{
+  //Configuracion monitor serie
+  Serial.begin(9600);
+  
+  //Configuramos las filas y columnas del LCD, en este caso 2 filas y 16 columnas
+  lcd.begin(COLS, ROWS); 
+}
+
+void loop()
+{
+  lcd.clear();  //Esto hace que la pantalla se limpie 
+  lcd.setCursor(0, 0);  //Posiciona el cursor en determinado lugar (columna 0, fila 0)
+  lcd.print("Hola mundo xd"); //Imprime el mensaje en pantalla
+  lcd.setCursor(0, 1);  
+  lcd.print(Pito);
+  delay(1000); //Deja pasar un tiempo
+}
