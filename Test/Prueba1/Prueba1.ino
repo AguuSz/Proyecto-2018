@@ -47,6 +47,7 @@ Adafruit_PCD8544 display = Adafruit_PCD8544(7, 6, 5, 4, 3);
 #define LOGO16_GLCD_HEIGHT 16
 #define LOGO16_GLCD_WIDTH  16
 
+
 void setup()   {
   Serial.begin(9600);
 
@@ -55,42 +56,25 @@ void setup()   {
 
   // you can change the contrast around to adapt the display
   // for the best viewing!
-  display.setContrast(50);
+  display.setContrast(100);
 
   display.display(); // show splashscreen
   delay(2000);
   display.clearDisplay();   // clears the screen and buffer
 
-  // draw a single pixel
-  display.drawPixel(10, 10, BLACK);
-  display.display();
-  delay(2000);
-  display.clearDisplay();
-
-  // draw multiple rectangles
-  testfillrect();
-  display.display();
-  delay(2000);
-  display.clearDisplay();
-
-  // draw the first ~12 characters in the font
-  testdrawchar();
-  display.display();
-  delay(2000);
-  display.clearDisplay();
-
-  // text display tests
-  display.setTextSize(1);
+  display.setTextSize(0.5);
   display.setTextColor(BLACK);
   display.setCursor(0,0);
-  display.println("Hello, world!");
-  display.setTextColor(WHITE, BLACK); // 'inverted' text
-  display.println(3.141592);
-  display.setTextSize(2);
-  display.setTextColor(BLACK);
-  display.print("0x"); display.println(0xDEADBEEF, HEX);
+  display.println("La fecha y hora es");
   display.display();
-  delay(2000);
+  delay(4000);
+  display.setCursor(0,30);
+  display.println("Marcos gay xd");
+  display.display();
+ 
+
+  
+}
 
 void loop() {
   
@@ -98,17 +82,5 @@ void loop() {
 
 
 
-void testdrawchar(void) {
-  display.setTextSize(1);
-  display.setTextColor(BLACK);
-  display.setCursor(0,0);
 
-  for (uint8_t i=0; i < 168; i++) {
-    if (i == '\n') continue;
-    display.write(i);
-    //if ((i > 0) && (i % 14 == 0))
-      //display.println();
-  }    
-  display.display();
-}
 
