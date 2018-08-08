@@ -75,13 +75,6 @@ void setup()   {
   display.display();
   delay(1000);
 
-  //Mostrando la imagen del logo del colegio
-  display.clearDisplay();
-  display.setRotation(1);
-  display.drawBitmap(0, 0, graphic, 84, 48, BLACK); //Drawing out bitmap
-  delay(2000);
- 
-
   
 }
 
