@@ -20,6 +20,8 @@ All text above, and the splash screen must be included in any redistribution
 #include <Adafruit_GFX.h>
 #include <Adafruit_PCD8544.h>
 
+extern uint8_t graphic[]; //Including the graphics
+
 // Software SPI (slower updates, more flexible pin options):
 // pin 7 - Serial clock out (SCLK)
 // pin 6 - Serial data out (DIN)
@@ -65,12 +67,19 @@ void setup()   {
   display.setTextSize(0.5);
   display.setTextColor(BLACK);
   display.setCursor(0,0);
-  display.println("La fecha y hora es");
+  display.println("Tu mama");
   display.display();
   delay(4000);
-  display.setCursor(0,30);
+  display.setCursor(0,20);
   display.println("Marcos gay xd");
   display.display();
+  delay(1000);
+
+  //Mostrando la imagen del logo del colegio
+  display.clearDisplay();
+  display.setRotation(1);
+  display.drawBitmap(0, 0, graphic, 84, 48, BLACK); //Drawing out bitmap
+  delay(2000);
  
 
   
