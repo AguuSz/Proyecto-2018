@@ -1,0 +1,4 @@
+// NOTAS //
+
+La pantalla utilizada en el tutorial es de 28 * 64 OLED la cual estaba usando I2C y SSD1306 driver chip. Como estamos usando una diferente, lo mas seguro es que tengamos que usar unas librerias graficas diferentes y modificar el codigo fuente de Arduino
+
