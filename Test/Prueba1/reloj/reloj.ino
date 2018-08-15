@@ -36,7 +36,7 @@ void loop()
     if(s == 10)
     {
         m = m + 1;
-        s = 1;
+        s = 0;
         display.setCursor(0, 0);
         display.print(m + "pinutos");
     }
