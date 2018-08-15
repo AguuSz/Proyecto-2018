@@ -26,20 +26,19 @@ void setup()
 void loop()
 {
 
-    for(s; s < 60; s++)
+    for(s; s < 10; s++)
     {
         display.print(s);
         display.display();
         delay(1000);
         display.clearDisplay();
     }
-    if(s == 60)
+    if(s == 10)
     {
         m = m + 1;
         s = 1;
-        // display.setCursor(0, 5)
-        display.println("Minutos: " + m);
-        display.display();
+        display.setCursor(0, 0);
+        display.print(m + "pinutos");
     }
     if(m == 60)
     {
