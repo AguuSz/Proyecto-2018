@@ -20,38 +20,17 @@ void setup()
     display.setCursor(0,0);
     display.setTextColor(BLACK);
     display.setTextSize(1);
+    display.println("Hola xd");
+    display.setCursor(0,10);
+    display.println("Tu mama");
+    delay(3000);
+    display.clearDisplay();
+    
 }
 
 
 void loop()
 {
 
-    for(s; s < 10; s++)
-    {
-        display.print(s);
-        display.display();
-        delay(1000);
-        display.clearDisplay();
-    }
-    if(s == 10)
-    {
-        m = m + 1;
-        s = 0;
-        display.setCursor(0, 0);
-        display.print(m + "pinutos");
-    }
-    if(m == 60)
-    {
-        h = h + 1;
-        m = 0;
-        display.println("Horas: " + h);
-        display.display();
-    }
-    if(h == 24)
-    {
-        h = 0;
-        m = 0;
-        s = 1;
-    }
 
 }
